@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>squircleiser</title>
+    <script>
+        const transition = () => {
+            const squircle = document.getElementById('square');
+            const squircleiser = document.getElementById('squircleiser');
+
+            if (squircle.style.borderRadius == '0px' || !squircle.style.borderRadius) {
+                squircle.style.borderRadius = '32px';
+                squircleiser.innerHTML = 'Desquircleise';
+            } else {
+                squircle.style.borderRadius = '0px';
+                squircleiser.innerHTML = 'Squircleise';
+            };
+        };
+    </script>
+</head>
+<body>
+    <div class="square" id="square"></div>
+    <button class="squircleiser" id="squircleiser" onclick="transition()">Squircleise</button>
+</body>
+</html>
