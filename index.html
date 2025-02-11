@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>squircleiser</title>
+</head>
+<body>
+    <div class="square" id="square"></div>
+    <button class="squircleiser" id="squircleiser" onclick="transition()">Squircleise</button>
     <script>
+        const squircle = document.getElementById('square');
+        const squircleiser = document.getElementById('squircleiser');
+
+        squircle.style.transition = 'all 0.2s';
+
         const transition = () => {
-            const squircle = document.getElementById('square');
-            const squircleiser = document.getElementById('squircleiser');
 
             if (squircle.style.borderRadius == '0px' || !squircle.style.borderRadius) {
                 squircle.style.borderRadius = '32px';
@@ -19,9 +26,5 @@
             };
         };
     </script>
-</head>
-<body>
-    <div class="square" id="square"></div>
-    <button class="squircleiser" id="squircleiser" onclick="transition()">Squircleise</button>
 </body>
 </html>
